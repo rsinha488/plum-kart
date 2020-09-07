@@ -1,0 +1,40 @@
+<div *ngIf="basketItems.length === 0" class="align-items-center cart__div">
+  <!-- <img src="/src/assets/images/shopping-cart-1026510_1280.jpg" alt="Cart" class="cart__img"/> -->
+  <i class="material-icons cart__icon" >shopping_cart</i>
+  <br/>
+   <span class="cart__empty">Your Plum Cart is empty</span>
+   <p class="text-center cart__explore" >
+     Explore our ever growing selection of products <br/> and exciting new offers!
+   </p>
+   <button mat-raised-button routerLink="home" >START SHOPPING</button>
+</div>
+<div *ngIf="basketItems.length > 0">
+  <ul class="list-group">
+    <li class="list-group-item">Category Name</li>
+    <li class="list-group-item" *ngFor="let item of basketItems" matcard>
+      <app-basket-item [basketItem]="item"></app-basket-item>
+    </li>
+  </ul>
+  <ul class="list-group">
+    <li class="list-group-item total__css">
+      <span ><strong >Total :</strong>  {{ basketTotal | currency:'INR' }}</span>
+    </li>
+  </ul>
+<!--  
+<mat-card class="mat__cardCss">
+  <mat-card-title class="title__card">Fruits & Vegetables</mat-card-title>
+  <div class="div__shop"  *ngFor="let item of basketItems">
+  <a  mat-card class="a__shopcss" routerLink="#">
+    <img src="../../../assets/images/IMG_20200713_185351.jpg" class="subcard__css">
+  </a>
+  <a mat-card routerLink="#">
+    <mat-card-content class="subcard__cssText">Product</mat-card-content>
+    <span class="subcard__cssText">Qty</span>
+  </a>
+  </div>
+  <strong>Total :</strong>  {{ 1500 | currency:'INR' }}
+</mat-card> -->
+ 
+</div>
+ 
+

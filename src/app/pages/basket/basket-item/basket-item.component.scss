@@ -1,0 +1,40 @@
+
+.a__shopcss{
+    display: flex;
+    flex-grow: 1.1;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.content{
+    justify-content: unset;
+    margin-left: 5%;
+    padding-top: 1%;
+}
+.subcard__cssText{
+      margin-top: 3%;
+}
+.div__shop{
+    display: flex;
+}  
+.subcard__css{
+    height: 140px;
+    width: 80px;
+}
+.itemBtn{
+    width:14%;
+    margin: 2%;
+}
+.qtyValue{
+    width:12%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.div-btn{
+    padding-top: 2%;
+    margin-top: 37px;
+}
+.minusBtn{
+    margin-left: 45%;
+}

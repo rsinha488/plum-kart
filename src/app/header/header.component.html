@@ -1,0 +1,87 @@
+<header id="header" class="header">
+  <div class="header-page bg-primary">
+    <a class="toggle-offcanvas bg-primary" (click)="toggleNav()"><span></span></a>
+    <h1 class="header-page-siteTitle">
+      <!-- <a routerLink="/">RSVP</a> -->
+      <a routerLink="/">Plum</a>
+    </h1>
+    <div class="search-box " [class.mat-elevation-z2]="!isActive" [class.mat-elevation-z8]="isActive">
+      <i class="material-icons nav__icon" >search</i>
+      <input class="search-value"type="text" placeholder="Search 1000+ products"/>
+      <span class="input-group-append">
+        <button
+          class="btn btn-danger"
+          (click)="resetQuery()"
+          [disabled]="!query">&times;</button>
+      </span>
+
+    </div>
+    <div class="header-page-authStatus">
+      <span *ngIf="auth.loggingIn">Logging in...</span>
+      <ng-template [ngIf]="!auth.loggingIn">
+        <a *ngIf="!auth.loggedIn" (click)="auth.login()">Log In</a>
+        <span *ngIf="auth.loggedIn && auth.userProfile">
+          <a routerLink="/my-rsvps">{{ auth.userProfile.name }}</a>
+          <span class="divider">|</span>
+          <a (click)="auth.logout()">Log Out</a>
+        </span>
+      </ng-template>
+    </div>
+  </div>
+
+  <nav id="nav" class="nav" role="navigation">
+    <ul class="nav-list">
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      </li>
+      <li>
+        <a
+          *ngIf="auth.loggedIn"
+          routerLink="/my-rsvps"
+          routerLinkActive="active">My RSVPs</a>
+      </li>
+      <li>
+        <a
+          *ngIf="auth.loggedIn && auth.isAdmin"
+          routerLink="/admin"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Admin</a>
+      </li>
+      <li>
+        <a
+          *ngIf="auth.loggedIn && auth.isAdmin"
+          routerLink="/admin/event/new"
+          routerLinkActive="active">Create Event</a>
+      </li>
+      <!-- Plum Navigation -->
+      <!-- <li>
+        <a routerLink=""
+        routerLinkActive="active">Home</a>
+      </li> -->
+      <li>
+        <a >Smart Basket</a>
+      </li>
+      <li>
+        <a routerLink="categories">Shop By Category</a>
+      </li>
+      <li>
+        <a >Plum Membership</a>
+      </li>
+      <li>
+        <a >Customer Service</a>
+      </li>
+      <li>
+        <a >Gift Card</a>
+      </li>
+      <li>
+        <a >Notifications</a>
+      </li>
+      <li>
+        <a >FAQS</a>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,42 @@
+.cart__div{
+    display: flow-root;
+    display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+ .cart__icon{
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+.cart__empty{
+    font-size: 20px;
+    font-weight: 500;
+}
+//Cart item
+.cart-item{
+  font-size: small;
+}
+
+//
+
+.mat__cardCss{
+  margin-top: 2%;
+  padding: 1% 0 5% 0;
+}
+.div__shop{
+display: flex;
+}
+.title__card{
+  text-align: center ;
+  border: 1px solid #ca56da;
+  border-radius: 3px;
+}
+.total__css{
+  background-color: #8e8ea3;
+  color: rgb(238, 235, 235);
+}

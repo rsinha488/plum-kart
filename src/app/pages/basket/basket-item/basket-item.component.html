@@ -1,0 +1,17 @@
+<div class="cart-item div__shop" routerLink="#">
+  <!-- <span>{{ basketItem.productName }} </span> * <span> {{ basketItem.qty}} </span>: &nbsp; 
+  <strong>{{ (basketItem.qty * basketItem.price) | currency:'INR' }</strong> -->
+  
+  <a  mat-card class="a__shopcss" routerLink="#">
+    <img src="../../../assets/images/IMG_20200713_185351.jpg" class="subcard__css">
+  </a>
+  <a mat-card class="a__shopcss content ">
+    <mat-card-content class="subcard__cssText">{{ basketItem.productName }}</mat-card-content>
+    <mat-card-content class="subcard__cssText">{{ basketItem.qty}}</mat-card-content>
+    <div class="div-btn">
+      <button  class="itemBtn minusBtn">-</button>
+      <input type="number" value="1" class="qtyValue">
+      <button class="itemBtn ">+</button>
+    </div>
+  </a> 
+</div>
